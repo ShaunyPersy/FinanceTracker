@@ -13,5 +13,47 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-text>
+    <h1 class="ion-margin-start">Uitgaves:</h1>
+  </ion-text>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="home"></ion-icon>
+        Huishuur:
+      </ion-label>
+      <ion-input value="0" min="0" max="1500" type="number" [(ngModel)]="huur.amount" class="ion-text-end"></ion-input>
+      <ion-input type="color" [(ngModel)]="huur.color"></ion-input>
+    </ion-item> 
+
+    <ion-item>
+      <ion-label>
+        <ion-icon name="cart"></ion-icon>
+        Boodschappen:
+      </ion-label>
+      <ion-input value="0" min="0" max="1500" type="number" [(ngModel)]="bood.amount" class="ion-text-end"></ion-input>
+      <ion-input type="color" [(ngModel)]="bood.color"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+        Overig:
+      </ion-label>
+      <ion-input value="0" min="0" max="1500" type="number" [(ngModel)]="overig.amount" class="ion-text-end"></ion-input>
+      <ion-input type="color" [(ngModel)]="overig.color"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-button (click)="pickFile()">Load file
+        <ion-icon name="document-outline" class="ion-margin-start" color="black"></ion-icon>
+      </ion-button>
+      <ion-button (click)="onSubmit()">Make Graph
+        <ion-icon name="bar-chart" class="ion-margin-start" color="black"></ion-icon>
+      </ion-button>
+    </ion-row>
+  </ion-grid>
 </ion-content>

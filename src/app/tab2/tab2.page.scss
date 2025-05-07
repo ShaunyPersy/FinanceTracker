@@ -1,0 +1,15 @@
+ion-list {
+    height: auto;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.container div{
+    height: 180px;    //10%, 60px = 150
+    width: 40%;
+    margin-bottom: 8%;
+}
